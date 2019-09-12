@@ -1,0 +1,13 @@
+package com.sample.rest.config;
+
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+@ComponentScan(basePackages = {"com.sample.rest.service"})
+public class ServiceConfig {
+
+	public ServiceConfig() {
+		super();
+	}
+}

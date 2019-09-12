@@ -1,0 +1,28 @@
+server:
+  port: 8085
+  servlet:
+    context-path: /api
+    session:
+      cookie:
+        name: acctk
+        http-only: true
+        path: /api
+        max-age: 30d
+
+
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  jpa: #time for persistence
+    properties:
+      hibernate:
+        jdbc:
+          time_zone: UTC
+  datasource:
+    hikari:
+      connection-timeout: 30000
+      idle-timeout: 60000
+  hateoas: #rest
+    use-hal-as-default-json-media-type: true
+
+
